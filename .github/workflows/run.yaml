@@ -5,3 +5,15 @@
 #     runs-on: ubuntu-latest
 #     steps:
 #       - run: echo "deploy start"
+name: learn-github-actions
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "deploy start"
+      - uses: actions/checkout@v2
+      - run: |
+          ls -al
+          cd .github/workflows/
+          ls -al
